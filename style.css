@@ -1,0 +1,55 @@
+body {
+    text-align: center;
+}
+
+#divs {
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: fit-content;
+    width:fit-content;
+}
+
+#divs > div {
+    height: 400px;
+    width:300px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#divs > div > img {
+    height: 100%;
+    width: 100%;
+}
+
+div.closer {
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    transition:600ms ease;
+}
+
+div.closer.slide {
+    transition:600ms ease;
+    top:-400px;
+    left: 0px;
+}
+
+img.imgpopup {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height:60vh !important;
+    width: 60vw !important;
+}
